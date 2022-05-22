@@ -1,0 +1,26 @@
+D:\chr\JAVA\PROBE>java FileTest
+Directory D:\chr\Java\Probe
+  FileTest.java
+  Clock.java
+  Cat.java
+  ck
+  ClockApplet.java
+  pak
+  Figuren.java
+  Hallo.java
+  IntSort.java
+  Max_t.java
+  MSG.LOG
+  PotenzReihe.java
+  StdIn.java
+  ListFontFamilies.java
+  Type.java
+  FigurenApplet.html
+  Clock.class
+  MenuTest.java
+  ComTest.java
+  Fakultaeten.java
+  ClockApplet.html
+  Echo.java
+
+D:\chr\JAVA\PROBE>

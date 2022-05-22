@@ -1,0 +1,42 @@
+//ReflectPrivateFieldsTest.java
+
+//2000-06-22  Knabe  Erstellung
+
+class ReflectPrivateFieldsTest {
+
+
+public static void main(final String[] i_args) throws IllegalAccessException {
+  final Class longClass = long.class;
+  System.out.println("longClass = " + longClass);
+  final ArgumentExc argumentExc = new ArgumentExc("Dauer",99);
+  System.out.println(toString(argumentExc));
+}
+
+public static String toString(final Object i_object) throws IllegalAccessException {
+  final Class theClass = i_object.getClass();
+  final String className = theClass.getName();
+  final java.lang.reflect.Field[] fields = theClass.getDeclaredFields();
+  final StringBuffer result = new StringBuffer();
+  result.append(className + "{");
+  for(int i=0; i<fields.length; i++){
+    final java.lang.reflect.Field field = fields[i];
+    field.setAccessible(true);
+    final Object fieldValue = field.get(i_object);
+    if(i>0){result.append(", ");}
+    result.append(field.getName() + "=" + fieldValue);
+  }
+  result.append("}");
+  return result.toString();
+}
+
+static class ArgumentExc extends multex.Exc {
+  public ArgumentExc(final String i_name, final int i_wert){
+    super("Argument {0} has illegal value {1}");
+    name = i_name;   wert = i_wert;
+  }
+  private final String name;
+  private final int    wert;
+}//ArgumentExc
+
+
+}//ReflectPrivateFieldsTest.java
