@@ -4,12 +4,12 @@
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>260</x>
-      <y>20</y>
+      <x>270</x>
+      <y>60</y>
       <w>240</w>
       <h>50</h>
     </coordinates>
-    <panel_attributes>Cyclic Type Dependency
+    <panel_attributes>Partial Order Type Dependency
 2022-05-22 Christoph Knabe
 bg=yellow</panel_attributes>
     <additional_attributes/>
@@ -17,8 +17,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>20</x>
-      <y>270</y>
+      <x>30</x>
+      <y>430</y>
       <w>200</w>
       <h>90</h>
     </coordinates>
@@ -33,8 +33,8 @@ size()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>260</x>
-      <y>270</y>
+      <x>270</x>
+      <y>430</y>
       <w>100</w>
       <h>70</h>
     </coordinates>
@@ -48,8 +48,8 @@ size()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>130</x>
-      <y>110</y>
+      <x>140</x>
+      <y>270</y>
       <w>100</w>
       <h>80</h>
     </coordinates>
@@ -64,22 +64,20 @@ path()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>30</x>
-      <y>160</y>
+      <x>40</x>
+      <y>320</y>
       <w>120</w>
       <h>130</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-&gt;
-m1=0..1
-m2=*
-r1=parent</panel_attributes>
+    <panel_attributes>lt=-&gt;
+m2=*</panel_attributes>
     <additional_attributes>10.0;110.0;10.0;10.0;100.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>110</x>
-      <y>180</y>
+      <x>120</x>
+      <y>340</y>
       <w>70</w>
       <h>110</h>
     </coordinates>
@@ -89,8 +87,8 @@ r1=parent</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>180</x>
-      <y>180</y>
+      <x>190</x>
+      <y>340</y>
       <w>150</w>
       <h>110</h>
     </coordinates>
@@ -98,16 +96,53 @@ r1=parent</panel_attributes>
     <additional_attributes>10.0;10.0;130.0;90.0</additional_attributes>
   </element>
   <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>140</x>
+      <y>90</y>
+      <w>80</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>HasPath
+--
+/path()/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>150</y>
+      <w>50</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;30.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>150</y>
+      <w>70</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..1
+r1=parent</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>100</x>
-      <y>450</y>
+      <x>60</x>
+      <y>580</y>
       <w>290</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>Type Dependencies:
-Directory knows Entry knows Directory
-File knows Entry knows Directory</panel_attributes>
+Directory knows Entry knows HasPath
+File knows Entry knows HasPath</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
